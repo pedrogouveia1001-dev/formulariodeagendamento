@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Consulta</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Camila Lanzone</h1>
+  <p>Terapeuta Integrativa | Medicina Chinesa</p>
+</header>
+
+<section class="banner">
+  <h2>Agende sua Consulta</h2>
+  <p>Cuidado personalizado para equilíbrio do corpo e da mente</p>
+</section>
+
+<main class="wrapper">
+
+  <section class="card">
+    <h3>Novo Agendamento</h3>
+
+    <div class="info-box">
+      <strong>Regras:</strong><br>
+      • domingo bloqueado<br>
+      • horários ocupados somem<br>
+      • data mínima = hoje
+    </div>
+
+    <form id="formAgendamento">
+
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Telefone</label>
+      <input type="tel" id="telefone" required>
+
+      <label>Data</label>
+      <input type="date" id="data" required>
+
+      <label>Hora</label>
+      <select id="hora" required></select>
+
+      <label>Tipo</label>
+      <select id="tipoConsulta" required>
+        <option value="">Selecione</option>
+        <option>Avaliação</option>
+        <option>Retorno</option>
+        <option>Homeopatia</option>
+      </select>
+
+      <label>Observações</label>
+      <textarea id="mensagem"></textarea>
+
+      <button type="submit">Agendar</button>
+
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>Agendamentos</h3>
+    <button onclick="limparAgendamentos()">Limpar</button>
+    <div id="listaAgendamentos"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Camila Lanzone</p>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
